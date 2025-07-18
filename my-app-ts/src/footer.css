@@ -38,10 +38,7 @@ background-color: hsl(220, 65%, 73%);
   text-align: left; /* テキストを左寄せ */
 }
 
-.name {
-  font-weight: bold;
-  margin-bottom: 5px; /* 名前と説明の間のスペース */
-}
+
 
 .description {
   font-size: 0.9em;
