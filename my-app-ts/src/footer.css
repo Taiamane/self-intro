@@ -1,81 +1,74 @@
+/* --- フッター全体のスタイル --- */
 .App-footer {
-background-color: hsl(220, 65%, 73%);
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  background-color: hsl(220, 65%, 73%);
   color: black;
-  position: relative; /* ここで'relative'でも問題ありませんが、フッターの位置決め自体には必須ではありません */
-  padding: 5px 20px;
-  align-items: center;
+  padding: 30px; /* 内側の余白を上下左右に設定 */
+  display: flex;
+  flex-direction: column; /* 子要素（画像エリアとコピーライト）を縦に並べる */
+  align-items: center;    /* 水平方向の中央揃え */
   justify-content: center;
-  gap: 10%;
-  box-sizing: border-box; /* パディングを含めて幅を計算する */
+  gap: 20px; /* 子要素間の隙間 */
+  width: 100%; /* 幅を画面いっぱいに */
+  box-sizing: border-box; /* paddingを含めて幅を計算する */
+  /* min-height: 30vh;  これを消すと理想になった*/
+  font-size: calc(10px + 1vmin); /* vminの比率を少し下げ、変化を緩やかに */
 }
 
+/* --- 画像と自己紹介文のコンテナ --- */
 .picture-and-desc {
-  display: flex; /* このコンテナ内で画像と説明文を横並びにする */
-  flex-direction: row;
+  display: flex;
   align-items: center; /* 垂直方向の中央揃え */
   justify-content: center; /* 水平方向の中央揃え */
-  gap: 30px; /* 画像とテキストの間に隙間を作成 */
-  width: 100%; /* 親要素（フッター）の幅に合わせる */
-  max-width: 800px; /* 必要であれば最大幅を設定 */
+  gap: 40px; /* 画像とテキストの隙間 */
+  width: 100%;
+  max-width: 800px; /* コンテンツが広がりすぎないように最大幅を設定 */
 }
 
+/* --- プロフィール画像 --- */
 .profileImage {
-  width: 200px; /* 画像の幅 */
-  height: 200px; /* 画像の高さ */
-  border-radius: 50%; /* 円形にする */
-  object-fit: cover; /* 画像がはみ出さないように調整 */
-  border: 2px solid white; /* オプション：白い枠線を追加 */
+  width: 360px;
+  height: 360px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  flex-shrink: 0; /* コンテナが縮んでも画像サイズを維持する */
+  
 }
 
-.introduction {
-  display: flex;
-  flex-direction: column; /* テキストを縦に並べる */
-  align-items: flex-start; /* 左寄せ */
-  text-align: left; /* テキストを左寄せ */
-}
-
-
-
+/* --- 自己紹介文 --- */
 .description {
   font-size: 0.9em;
   line-height: 1.4;
+  text-align: left; /* PCでは左寄せ */
 }
 
-.description p{
+.description p {
     font-family: "Noto Sans JP" ;
+    margin: 4px 0; /* 段落ごとの上下の余白を少し設定 */
+}
+
+/* --- コピーライト --- */
+.copyright {
+  font-size: 0.8em;
+  margin-top: auto; /* フッターの高さに余裕がある場合、一番下に配置される */
 }
 
 
-
-/* PC時 */
-@media screen and (min-width: 690px) {
-    
-}
-
-@media screen and (max-width: 689px) {
-    .App-footer {
-    flex-direction: column; /* 画面幅が小さい場合、縦並びにする */
-    justify-content: center; /* 縦並びでも中央揃えを維持 */
-    align-items: center;     /* 縦並びで中央揃えを維持 */
-    padding: 20px; /* 縦並びになった時に上下左右のパディングを増やす */
-    gap: 15px; /* 縦並びになった時の間隔を調整 */
-    width: 100%; /* ★追加: 画面幅いっぱいに広げる */
+/* --- スマートフォン表示用のスタイル --- */
+@media (max-width: 689px) {
+  .picture-and-desc {
+    flex-direction: column; /* 画像とテキストを縦並びにする */
+    text-align: center;   /* 全体を中央寄せ */
   }
-  .profileImage {
-    margin-bottom: 10px; /* 画像とテキストの間に少し隙間を作る (縦並び時) */
-  }
+
   .description {
-    align-items: center; /* 縦並びになったら自己紹介文全体を中央揃え */
-    text-align: center; /* テキストも中央揃え */
-    width: 100%; /* ★追加: 親要素の幅いっぱいに広げる */
-    max-width: 400px; /* 必要であればテキストの最大幅を設定し、長くなりすぎないようにする */
+    text-align: center;   /* テキストも中央寄せにする */
   }
 
-  .picture-and-desc {  
-  flex-direction: column;
-}
+  .profileImage {
+    /* スマホでは画像を少し小さくする */
+    width: 240px;
+    height: 240px;
+  }
 }

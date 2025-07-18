@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { Link,BrowserRouter, Routes, Route } from 'react-router-dom';
 import profilePic from'./picture/testpic.jpg'
 
+import TopPage from './top_page';
+
 function App() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,9 +37,13 @@ function App() {
         </button>
       </header>
 
-      <body>
-        あああああああああ
-      </body>
+      <main>
+        <Routes>
+       <Route path='/' Component={TopPage}/>
+       </Routes>
+      </main>
+        
+      
 
       <footer className='App-footer'>
         <div className='picture-and-desc'>
@@ -51,16 +57,14 @@ function App() {
             <p>自己紹介文二つ目だよ</p>
             <p>自己紹介文二つ目だよ</p>
             <p>自己紹介文二つ目だよ</p>
+            <p>自己紹介文二つ目だよ</p>
+            <p>自己紹介文二つ目だよ</p>
+            <p>自己紹介文二つ目だよ</p>
           </div>
         </div>
       <div className="copyright"> 2024 Amane</div>
       </footer>
 
-
-      
-        <Routes>
-        
-        </Routes>
       </BrowserRouter>
     </div>
 
