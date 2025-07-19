@@ -10,24 +10,10 @@ interface TopPageProps {
 const TopPage: React.FC<TopPageProps> = () => {
   return (
     <div> 
-      <h1>ようこそ！</h1>
-      <p>このページは、あなたのウェブサイトのトップページです。</p>
-      <p>ここに主要な情報や魅力的なコンテンツを追加していきましょう。</p>
-      <section>
-        <h2>主な特徴</h2>
-        <ul>
-          <li>特徴 1: ここにサービスの簡単な説明</li>
-          <li>特徴 2: もう一つのメリットや機能</li>
-          <li>特徴 3: ユーザーにとっての価値</li>
-        </ul>
-      </section>
-
-      
-      <div>
-        <button onClick={() => alert('ボタンがクリックされました！')}>もっと詳しく見る</button>
+      <div className='top-main-massage'>
+        <h1>Welcome.</h1>
+        <p>このページは、Amaneの作品、ブログを掲載しているサイトです。</p>
       </div>
-
-     
     </div>
   );
 };
