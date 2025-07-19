@@ -9,7 +9,7 @@ interface TopPageProps {
 
 const TopPage: React.FC<TopPageProps> = () => {
   return (
-    <div> 
+    <div className='main-content'> 
       <div className='top-main-massage'>
         <h1>Welcome.</h1>
         <p>このページは、Amaneの作品、ブログを掲載しているサイトです。</p>
