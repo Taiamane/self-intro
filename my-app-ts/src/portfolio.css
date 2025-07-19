@@ -15,7 +15,6 @@
 }
 
 
-
 /* --- 作品グリッドのスタイル --- */
 
 /* グリッド全体のコンテナ */
@@ -25,6 +24,7 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px; /* 作品間の余白 */
   margin-top: 40px;
+  
 }
 
 /* 各作品のカード（リンク） */
@@ -36,6 +36,7 @@
   aspect-ratio: 4 / 3; /* カードの縦横比を4:3に固定 */
   text-decoration: none;
   color: white;
+  border: 1px solid black;
 }
 
 /* 作品画像 */
@@ -44,6 +45,8 @@
   height: 100%;
   object-fit: cover; /* 画像の比率を保ったまま、コンテナ全体を覆う */
   transition: transform 0.3s ease; /* ホバー時のアニメーション */
+  border-radius: 8px; /* 角を丸くする */
+  
 }
 
 /* マウスホバー時の画像 */
