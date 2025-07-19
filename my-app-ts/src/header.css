@@ -8,6 +8,7 @@
   position: relative;
   padding:5px 20px;
   align-items: center;
+  justify-content: space-between;
   
 }
 
@@ -115,5 +116,15 @@
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
+  }
+
+  .App-header .page_title {
+    /* ★重要: タイトルを画面中央に寄せるための調整 */
+    position: absolute; /* 親要素基準で絶対位置指定 */
+    left: 50%; /* 左端から50%の位置 */
+    transform: translateX(-50%); /* 自身の幅の半分だけ左にずらし、正確に中央に配置 */
+    width: fit-content; /* テキストの幅に合わせる */
+    z-index: 1; /* 他の要素より手前に表示されるように調整 */
+    white-space: nowrap; /* テキストが改行されないようにする */
   }
 }

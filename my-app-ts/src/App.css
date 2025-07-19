@@ -1,0 +1,17 @@
+/* App.css (またはグローバルなCSSファイル) */
+
+html, body, #root, .App {
+  height: 100%; /* 全ての親要素が全高さを占めるようにする */
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column; /* 子要素（ヘッダー、メイン、フッター）を縦に並べる */
+}
+
+.App main {
+  flex-grow: 1; /* メインコンテンツが残りのスペースを全て占有するようにする */
+  /* paddingやその他のスタイルを追加 */
+  padding: 20px;
+}
