@@ -14,3 +14,90 @@
 
 }
 
+
+
+/* --- 作品グリッドのスタイル --- */
+
+/* グリッド全体のコンテナ */
+.works_grid {
+  display: grid;
+  /* 画面幅に応じて列数を変更 */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px; /* 作品間の余白 */
+  margin-top: 40px;
+}
+
+/* 各作品のカード（リンク） */
+.work_card {
+  position: relative; /* 子要素を絶対配置するための基準 */
+  display: block;
+  overflow: hidden; /* カードからはみ出た部分を非表示に */
+  border-radius: 8px; /* 角を丸くする */
+  aspect-ratio: 4 / 3; /* カードの縦横比を4:3に固定 */
+  text-decoration: none;
+  color: white;
+}
+
+/* 作品画像 */
+.work_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像の比率を保ったまま、コンテナ全体を覆う */
+  transition: transform 0.3s ease; /* ホバー時のアニメーション */
+}
+
+/* マウスホバー時の画像 */
+.work_card:hover .work_image {
+  transform: scale(1.05); /* 少しだけ拡大 */
+}
+
+/* 作品名などを表示するオーバーレイ */
+.work_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 半透明の黒い背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* 通常時は非表示 */
+  transition: opacity 0.3s ease; /* ホバー時のアニメーション */
+}
+
+/* マウスホバー時のオーバーレイ */
+.work_card:hover .work_overlay {
+  opacity: 1; /* 表示する */
+}
+
+/* 作品タイトル */
+.work_title {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* --- 元のタグ部分のスタイル（参考） --- */
+.works_list {
+  max-width: 1200px;
+}
+
+.tag_filters {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag_checkbox {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  user-select: none; /* テキスト選択を無効に */
+}
+
+.tag_checkbox input {
+  margin-right: 5px;
+}
