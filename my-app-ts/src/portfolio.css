@@ -1,0 +1,16 @@
+/* PC時 */
+@media screen and (min-width: 690px) {
+    .works_list{
+        text-align: center;
+    }
+
+}
+
+/*画面幅が狭い時*/
+@media screen and (max-width: 689px) {
+    .works_list{
+        text-align: left;
+    }
+
+}
+
