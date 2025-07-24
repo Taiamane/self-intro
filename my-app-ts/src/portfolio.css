@@ -81,11 +81,6 @@
   padding: 0 10px;
 }
 
-/* --- 元のタグ部分のスタイル（参考） --- */
-.works_list {
-  max-width: 1200px;
-}
-
 .tag_filters {
   margin: 20px 0;
   display: flex;
