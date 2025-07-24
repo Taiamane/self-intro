@@ -47,9 +47,6 @@ function Main_workslist(){
             <div>
             <Link to={`/portfolioDetail/${work.id}`} key={work.id} className="work_card">
               <img src={work.imageUrl} alt={work.title} className="work_image" />
-              <div className="work_overlay">
-                <h3 className="work_title">{work.title}</h3>
-              </div>
               
             </Link>
             <h3>{work.title}</h3>
