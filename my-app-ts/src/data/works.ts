@@ -34,5 +34,4 @@ const worksData = [
   },
 ];
 
-// 他ファイルで使えるように、worksDataをエクスポートする
 export default worksData;
