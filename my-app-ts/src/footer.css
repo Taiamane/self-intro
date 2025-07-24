@@ -26,8 +26,8 @@
 
 /* --- プロフィール画像 --- */
 .profileImage {
-  width: 360px;
-  height: 360px;
+  width: 200px;
+  height: 200px;
   max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
@@ -63,12 +63,12 @@
   }
 
   .description {
-    text-align: center;   /* テキストも中央寄せにする */
+    text-align: left;  
   }
 
   .profileImage {
     /* スマホでは画像を少し小さくする */
-    width: 240px;
-    height: 240px;
+    width: 140px;
+    height: 140px;
   }
 }

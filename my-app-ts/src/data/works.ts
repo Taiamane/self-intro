@@ -10,13 +10,15 @@ const worksData = [
     id: 1,
     title: 'サンプル1',
     imageUrl: sampleImage1, // インポートした変数を指定
-    tags: ['Web', 'React']
+    tags: ['Web', 'React'],
+    explanation:"厳島神社みたいな写真があると思うけど、ここに作ったものの簡易的な説明を書くよ"
   },
   {
     id: 2,
     title: 'サンプル2',
     imageUrl: sampleImage2,
-    tags: ['Design']
+    tags: ['Design'],
+    explanation:"一旦幅の調整は置いとこう、これでも十分可読性はあるし"
   },
   {
     id: 3,
@@ -28,7 +30,7 @@ const worksData = [
     id: 4,
     title: 'サンプル4',
     imageUrl: sampleImage4,
-    tags: ['Illustration']
+    tags: ['Python', 'C++']
   },
 ];
 

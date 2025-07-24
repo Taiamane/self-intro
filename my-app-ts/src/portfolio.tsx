@@ -7,21 +7,22 @@ import worksData from './data/works';
 
 function Main_workslist(){
 
-    const allTags =  ['React', 'Python','C++', 'R']
+    const allTags =  ['React', 'Python','C++', 'R'] //調整箇所
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
     const filteredWorks = selectedTags.length > 0
     ? worksData.filter(work => work.tags.some(tag => selectedTags.includes(tag)))
-    : worksData;
+    : worksData; //選んだタグを1つでも含むものを表示する。とりまこれで
 
-    const handleTagChange = (event:any) => {
+    const handleTagChange = (event:React.ChangeEvent<HTMLInputElement>) => {
         const tagName = event.target.value;
             if (event.target.checked) {
             // チェックされたらタグを追加
-            setSelectedTags([selectedTags, tagName]);
+             setSelectedTags(prevTags => [...prevTags, tagName])
             } else {
             // チェックが外れたらタグを削除
             setSelectedTags(selectedTags.filter(tag => tag !== tagName));
+            
             }
     };
   return (
@@ -43,12 +44,17 @@ function Main_workslist(){
       </div>
       <div className="works_grid">
           {filteredWorks.map(work => (
+            <div>
             <Link to={`/works/${work.id}`} key={work.id} className="work_card">
               <img src={work.imageUrl} alt={work.title} className="work_image" />
               <div className="work_overlay">
                 <h3 className="work_title">{work.title}</h3>
               </div>
+              
             </Link>
+            <h3>{work.title}</h3>
+            <div>{work.explanation}</div>
+            </div>
           ))}
         </div>
     </div>
