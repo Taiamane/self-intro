@@ -20,3 +20,18 @@ html, body, #root, .App {
   margin-top: 80px;
   padding: 30px;
 }
+
+@media screen and (min-width: 690px) {
+    .main-title, .intro-passage{
+        text-align: center;
+    }
+
+}
+
+/*画面幅が狭い時*/
+@media screen and (max-width: 689px) {
+    .main-title .intro-passage{
+        text-align: left;
+    }
+
+}

@@ -11,8 +11,10 @@ const TopPage: React.FC<TopPageProps> = () => {
   return (
     <div className='main-content'> 
       <div className='top-main-massage'>
-        <h1>Welcome.</h1>
-        <p>このページは、Amaneの作品、ブログを掲載しているサイトです。</p>
+        <h1 className='main-title'>Welcome.</h1>
+        <div className='intro-passage'>
+          <p>このページは、Amaneの作品、ブログを掲載しているサイトです。</p>
+        </div>
       </div>
     </div>
   );

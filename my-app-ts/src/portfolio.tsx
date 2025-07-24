@@ -28,8 +28,8 @@ function Main_workslist(){
   return (
     <div className='main-content'> 
       <div className='works_list'>
-        <h1>Works</h1>
-        <p>作品一覧のページです。</p>
+        <h1 className='main-title'>Works</h1>
+        <p className='intro-passage'>作品一覧のページです。</p>
         {allTags.map(tag => (
             <label key={tag} className="tag_checkbox">
               <input

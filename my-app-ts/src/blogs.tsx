@@ -6,7 +6,13 @@ import './blogs.css';
 function blogs_list(){
 
     return(
-        <h1>Blogs</h1>
+        <div className='main-content'>
+            <h1 className='main-title'>Blogs</h1>
+            <div className='intro-passage'>
+                <p>ブログ一覧を掲載しています。</p>
+            </div>
+            
+        </div>
     )
 
 }
