@@ -45,7 +45,7 @@ function Main_workslist(){
       <div className="works_grid">
           {filteredWorks.map(work => (
             <div>
-            <Link to={`/works/${work.id}`} key={work.id} className="work_card">
+            <Link to={`/portfolioDetail/${work.id}`} key={work.id} className="work_card">
               <img src={work.imageUrl} alt={work.title} className="work_image" />
               <div className="work_overlay">
                 <h3 className="work_title">{work.title}</h3>
