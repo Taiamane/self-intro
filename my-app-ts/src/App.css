@@ -15,3 +15,24 @@ html, body, #root, .App {
   /* paddingやその他のスタイルを追加 */
   padding: 20px;
 }
+
+.main-content{
+  margin-top: 80px;
+  padding: 30px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+@media screen and (min-width: 690px) {
+    .main-title, .intro-passage{
+        text-align: center;
+    }
+
+}
+
+/*画面幅が狭い時*/
+@media screen and (max-width: 689px) {
+    .main-title .intro-passage{
+        text-align: left;
+    }
+
+}

@@ -5,11 +5,14 @@
   flex-direction: row;
   font-size: calc(10px + 2vmin);  
   color: black;
-  position: relative;
+  position: fixed;
   padding:5px 20px;
   align-items: center;
   justify-content: space-between;
-  
+  top:0px;
+  width:100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .page_title{
@@ -48,12 +51,12 @@
 	content: '';
 	width: 0;
 	transition: all 0.3s ease;
-	border-bottom: 1px solid #4a4f5a;
+	border-bottom: 1px solid white;
 	display: block;
 }
 .nav-links a:hover:after {
 	width: 100%;
-	border-bottom: 1px solid #4a4f5a;
+	border-bottom: 1px solid whiteå;
 }
 
 /* === ハンバーガーメニューボタンのスタイル === */
@@ -118,7 +121,7 @@
   margin-bottom: auto;
   }
 
-  .App-header .page_title {
+ .page_title {
     /* ★重要: タイトルを画面中央に寄せるための調整 */
     position: absolute; /* 親要素基準で絶対位置指定 */
     left: 50%; /* 左端から50%の位置 */

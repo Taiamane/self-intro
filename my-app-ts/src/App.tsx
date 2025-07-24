@@ -4,6 +4,9 @@ import './footer.css'
 import React, { useState } from 'react';
 import { Link,BrowserRouter, Routes, Route } from 'react-router-dom';
 import profilePic from'./picture/testpic.jpg'
+import Main_workslist from './portfolio';
+import blogs_list from './blogs';
+import PortfolioDetail from './portfolio-detail';
 
 import TopPage from './top_page';
 
@@ -18,15 +21,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <header className="App-header">
-        <p className='page_title'>
+        <Link to="/" className='page_title' style={{ textDecoration: 'none', color: 'inherit' }}>         
           Amane-Portal
-        </p>
-
+        </Link>
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>Top</Link>
-          <Link to="/howtouse" onClick={() => setIsMenuOpen(false)}>PortForio</Link>
-          <Link to="/pricing" onClick={() => setIsMenuOpen(false)}>Blogs</Link>
-          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Another</Link>
+          
+          <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>PortForio</Link>
+          <Link to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</Link>
+          <Link to="/another_links" onClick={() => setIsMenuOpen(false)}>Another</Link>
+
         </div>
 
         <button className="hamburger-menu" onClick={toggleMenu}>
@@ -39,8 +42,11 @@ function App() {
 
       <main>
         <Routes>
-       <Route path='/' Component={TopPage}/>
-       </Routes>
+          <Route path='/' Component={TopPage}/>
+          <Route path='/portfolio' Component={Main_workslist}/>
+          <Route path='/blogs' Component={blogs_list}/>
+          <Route path='portfolioDetail/:id' Component={PortfolioDetail}/> {/* /:id*/}
+        </Routes>
       </main>
         
       
