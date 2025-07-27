@@ -16,19 +16,18 @@ interface WorkItem {
 }
 
 function PortfolioDetail(){
-    const {id} = useParams<{id:string}>();
+    const {id} = useParams<{id:string}>();    
+    const numericId: number = parseInt(id, 10);
+    const work = worksData.find(item => item.id === numericId);
     
-    if(id){ 
-        const numericId = parseInt(id, 10);
-        const work = worksData.find(item => item.id === numericId);
-    }
     return(
         <div className='main-content'>
             <div>作品詳細をここに書きます</div>
+            <div>{work.title}</div>
             
         </div>
 
-        //こっから書かないとね〜
+        
         
     )
 }
