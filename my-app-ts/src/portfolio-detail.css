@@ -1,0 +1,17 @@
+@media screen and (min-width: 690px) {
+    .portfolio-detail{
+        display: flex;
+        padding:15px;
+    }
+}
+
+/*画面幅が狭い時*/
+@media screen and (max-width: 689px) {
+    .portfolio-detail{
+        display: flex;
+        flex-direction: column;
+        padding:15px;
+    }
+    
+
+}
