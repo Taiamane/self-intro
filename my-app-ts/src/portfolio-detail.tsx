@@ -20,9 +20,8 @@ function PortfolioDetail(){
                 <h1>{work.title}</h1> {/* タイトルを一番上に表示 */}
                 <p><strong>プロジェクトタイプ:</strong> {work.projectType}</p>
                 <p><strong>制作期間:</strong> {work.developmentTime}</p>
-                <p><strong>タグ:</strong> {work.tags.join(', ')}</p>
+                {work.technologiesUsed && <p><strong>使用技術:</strong> {work.technologiesUsed.join(', ')}</p>}
                 {work.role && <p><strong>担当した役割:</strong> {work.role}</p>}
-                <h2>説明</h2>
                 <p>{work.description}</p>
             </div>
             

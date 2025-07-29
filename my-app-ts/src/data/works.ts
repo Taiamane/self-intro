@@ -12,10 +12,9 @@ export interface Work {
     tags: string[];
     description: string;
     imageUrl: string[]; // 画像URLが必須でない場合
-    photos?: { src: string; alt: string; }[]; // 写真は配列で、中身も型定義
     role?: string; // ここをオプションにする
     url?: string; // 追加で提案したURLもオプションに
-    technologiesUsed?: string[]; // 使用技術もオプションに
+    technologiesUsed?: string[]; 
     challenges?: string; // 課題と解決策もオプションに
     learnings?: string; // 学びもオプションに
     
