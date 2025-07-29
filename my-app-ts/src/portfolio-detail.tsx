@@ -27,12 +27,10 @@ function PortfolioDetail(){
             </div>
             
             <div className="portfolio-photos">                   
-                <img  src={work.imageUrl}  style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }} />
-            </div>
-
-
-            
-            
+                {work.imageUrl && work.imageUrl.map((url, index) => (
+            <img key={index} src={url} alt={`${work.title} ${index + 1}`} />
+            ))}
+            </div>                       
         </div>               
     )
 }
