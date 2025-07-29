@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
 import { Link,BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './blogs.css';
+import './another-links.css';
 import Coming_soon from './comingsoon';
 
-function blogs_list(){
+function Another_links(){
 
     return(
         <Coming_soon />
@@ -13,4 +13,4 @@ function blogs_list(){
 
 }
 
-export default blogs_list;
+export default Another_links;

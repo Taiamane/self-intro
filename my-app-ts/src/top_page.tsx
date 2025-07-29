@@ -1,16 +1,17 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import './top_page.css'; 
 
-// Propsの型定義（もしPropsを受け取る場合）
-interface TopPageProps {
-  // 例: title?: string;
-  // 例: description?: string;
-}
+function TopPage(){
+  const [isVisible, setIsVisible] = useState(false);
 
-const TopPage: React.FC<TopPageProps> = () => {
+  useEffect(()=>{
+    const timer = setTimeout(()=>{setIsVisible(true)}, 500) //setTimeoutを使うと、指定した時間遅らせて関数を実行できる
+    return ()=> clearTimeout(timer);
+  },[])
+
   return (
     <div className='main-content'> 
-      <div className='top-main-massage'>
+      <div className={`top-main-message ${isVisible ? 'fade-in' : ''}`}>
         <h1 className='main-title'>Welcome.</h1>
         <div className='intro-passage'>
           <p>このページは、Amaneの作品、ブログを掲載しているサイトです。</p>

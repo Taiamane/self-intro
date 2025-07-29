@@ -4,33 +4,44 @@ import sampleImage3 from '../picture/sample3.jpg';
 import sampleImage4 from '../picture/sample4.jpg';
 
 
+export interface Work {
+    id: string;
+    title: string;
+    projectType: string;
+    developmentTime: string; 
+    tags: string[];
+    description: string;
+    imageUrl: string[]; // 画像URLが必須でない場合
+    photos?: { src: string; alt: string; }[]; // 写真は配列で、中身も型定義
+    role?: string; // ここをオプションにする
+    url?: string; // 追加で提案したURLもオプションに
+    technologiesUsed?: string[]; // 使用技術もオプションに
+    challenges?: string; // 課題と解決策もオプションに
+    learnings?: string; // 学びもオプションに
+    
+}
+
 // 作品データ
-const worksData = [
+const worksData: Work[] = [
+
+  
   {
-    id: 1,
+    id: '1',
     title: 'サンプル1',
-    imageUrl: sampleImage1, // インポートした変数を指定
+    projectType:"ハッカソン",
+    developmentTime:"1日",
+    imageUrl: [sampleImage1], // インポートした変数を指定
     tags: ['Web', 'React'],
-    explanation:"厳島神社みたいな写真があると思うけど、ここに作ったものの簡易的な説明を書くよ"
+    description:"厳島神社みたいな写真があると思うけど、ここに作ったものの簡易的な説明を書くよ"
   },
   {
-    id: 2,
+    id: '2',
     title: 'サンプル2',
-    imageUrl: sampleImage2,
+    imageUrl: [sampleImage2, sampleImage3],
     tags: ['Design'],
-    explanation:"一旦幅の調整は置いとこう、これでも十分可読性はあるし"
-  },
-  {
-    id: 3,
-    title: 'サンプル3',
-    imageUrl: sampleImage3,
-    tags: ['Web', 'Next.js']
-  },
-  {
-    id: 4,
-    title: 'サンプル4',
-    imageUrl: sampleImage4,
-    tags: ['Python', 'C++']
+    description: "一旦幅の調整は置いとこう、これでも十分可読性はあるし",
+    projectType: '',
+    developmentTime: ''
   },
 ];
 

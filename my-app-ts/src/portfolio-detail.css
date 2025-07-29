@@ -1,0 +1,51 @@
+@media screen and (min-width: 690px) {
+    .portfolio-detail{
+        display: flex;
+        gap:30px;
+        padding:15px;
+        justify-content: center;
+        
+    }
+
+    .portfolio-photos img {
+        width: 300px;  
+        height: 225px; 
+        object-fit: cover; /* 画像をトリミングして、指定した領域を完全に覆う */
+        border-radius: 10px;
+        border:1px solid black;
+        margin:5px;
+        
+    }
+    .portfolio-photos{
+        flex: 1;
+        min-width: 300px;
+        display: flex;       /* ここがdisplay: flex; であることを確認 */
+        flex-wrap: wrap;   
+        justify-content: center; /* これを追加または確認！ */
+        align-items: flex-start;
+    }
+    
+}
+
+/*画面幅が狭い時*/
+@media screen and (max-width: 689px) {
+    .portfolio-detail{
+        display: flex;
+        flex-direction: column;
+        padding:15px;
+        
+    }
+    .portfolio-photos{
+        text-align: center;
+        
+    }
+    .portfolio-photos img {
+        width: 80%;  
+        height: 300px; 
+        object-fit: cover; /* 画像をトリミングして、指定した領域を完全に覆う */
+        border-radius: 10px;
+        border:1px solid black;
+        margin:5px
+    }
+}
+
