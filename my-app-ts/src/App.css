@@ -8,6 +8,7 @@ html, body, #root, .App {
 .App {
   display: flex;
   flex-direction: column; /* 子要素（ヘッダー、メイン、フッター）を縦に並べる */
+  font-family: "Roboto", "Arial", "Helvetica", "M PLUS Rounded 1c", sans-serif;
 }
 
 .App main {
@@ -19,7 +20,6 @@ html, body, #root, .App {
 .main-content{
   margin-top: 80px;
   padding: 30px;
-  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 @media screen and (min-width: 690px) {
