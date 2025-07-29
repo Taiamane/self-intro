@@ -1,0 +1,21 @@
+.coming-soon{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.coming-soon.fade-in{
+    opacity: 1;
+}
+
+@media screen and (min-width: 690px) {
+    .coming-soon{
+        text-align: center;
+    }
+}
+
+/*画面幅が狭い時*/
+@media screen and (max-width: 689px) {
+    .coming-soon{
+        text-align: left;
+    }   
+
+}

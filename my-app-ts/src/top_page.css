@@ -1,6 +1,6 @@
 /* PC時 */
 @media screen and (min-width: 690px) {
-    .top-main-massage{
+    .top-main-message{
         text-align: center;
     }
 
@@ -8,9 +8,17 @@
 
 /*画面幅が狭い時*/
 @media screen and (max-width: 689px) {
-    .top-main-massage{
+    .top-main-message{
         text-align: left;
     }
 
+}
+
+.top-main-message{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.top-main-message.fade-in{
+    opacity: 1;
 }
 

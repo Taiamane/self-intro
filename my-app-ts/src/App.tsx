@@ -3,12 +3,13 @@ import './header.css'
 import './footer.css'
 import React, { useState } from 'react';
 import { Link,BrowserRouter, Routes, Route } from 'react-router-dom';
-import profilePic from'./picture/testpic.jpg'
+import profilePic from'./picture/testicon.jpg'
 import Main_workslist from './portfolio';
 import blogs_list from './blogs';
 import PortfolioDetail from './portfolio-detail';
 
 import TopPage from './top_page';
+import Another_links from './another-links';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
           
           <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>PortForio</Link>
           <Link to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</Link>
-          <Link to="/another_links" onClick={() => setIsMenuOpen(false)}>Another</Link>
+          <Link to="/another_links" onClick={() => setIsMenuOpen(false)}>Links</Link>
 
         </div>
 
@@ -46,6 +47,7 @@ function App() {
           <Route path='/portfolio' Component={Main_workslist}/>
           <Route path='/blogs' Component={blogs_list}/>
           <Route path='portfolioDetail/:id' Component={PortfolioDetail}/> {/* /:id*/}
+          <Route path='another_links' Component={Another_links}/>
         </Routes>
       </main>
         
