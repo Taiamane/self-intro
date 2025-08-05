@@ -27,7 +27,7 @@ function App() {
         </Link>
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           
-          <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>PortForio</Link>
+          <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Works</Link>
           <Link to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</Link>
           <Link to="/another_links" onClick={() => setIsMenuOpen(false)}>Links</Link>
 
