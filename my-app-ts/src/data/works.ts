@@ -5,6 +5,8 @@ import sampleImage4 from '../picture/sample4.jpg';
 import picture2_1 from '../picture/pic2_1.png';
 import picture2_2 from '../picture/pic2_2.png';
 
+import icon from '../picture/testicon.jpg'
+
 
 export interface Work {
     id: string;
@@ -57,10 +59,10 @@ const worksData: Work[] = [
     title: 'Amane-portal',
     developmentTime: '2024.07.07〜',
     projectType: '個人開発',
-    imageUrl: [],
+    imageUrl: [icon],
     tags: ['React', 'Typescript','Node.js'],
     descriptionEasy:"自己紹介用のサイト。",
-    description: "",
+    description: "自己紹介用に作成した弊サイト。画面幅に合わせたレスポンシブデザインや、擬似要素を利用したhover時のアンダーラインなど、前作markdown-memoで思い出した内容を元にした工夫をしている。",
     githuburl:"https://github.com/Taiamane/self-intro"      
   },
 ];
