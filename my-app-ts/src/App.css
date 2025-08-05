@@ -8,7 +8,7 @@ html, body, #root, .App {
 .App {
   display: flex;
   flex-direction: column; /* 子要素（ヘッダー、メイン、フッター）を縦に並べる */
-  font-family: "Roboto", "Arial", "Helvetica", "M PLUS Rounded 1c", sans-serif;
+  font-family:  "Helvetica","hiragino kaku gothic pro", sans-serif;
 }
 
 .App main {

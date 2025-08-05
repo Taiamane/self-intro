@@ -26,8 +26,8 @@
 
 /* --- プロフィール画像 --- */
 .profileImage {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
@@ -68,7 +68,7 @@
 
   .profileImage {
     /* スマホでは画像を少し小さくする */
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
   }
 }

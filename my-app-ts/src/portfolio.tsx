@@ -50,7 +50,7 @@ function Main_workslist(){
               
             </Link>
             <h3>{work.title}</h3>
-            <div>{work.description}</div>
+            <div>{work.descriptionEasy}</div>
             </div>
           ))}
         </div>

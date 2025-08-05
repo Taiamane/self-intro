@@ -12,7 +12,7 @@
         height: 225px; 
         object-fit: cover; /* 画像をトリミングして、指定した領域を完全に覆う */
         border-radius: 10px;
-        border:1px solid black;
+        
         margin:5px;
         
     }

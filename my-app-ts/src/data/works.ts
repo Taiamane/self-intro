@@ -11,6 +11,7 @@ export interface Work {
     developmentTime: string; 
     tags: string[];
     description: string;
+    descriptionEasy?:string;
     imageUrl: string[]; // 画像URLが必須でない場合
     role?: string; // ここをオプションにする
     url?: string; // 追加で提案したURLもオプションに
@@ -26,21 +27,26 @@ const worksData: Work[] = [
   
   {
     id: '1',
-    title: 'サンプル1',
-    projectType:"ハッカソン",
-    developmentTime:"1日",
+    title: 'Implementation of 2048',
+    projectType:"授業課題",
+    developmentTime:"2025.2.25〜2025.3.24",
     imageUrl: [sampleImage1], // インポートした変数を指定
-    tags: ['Web', 'React'],
-    description:"厳島神社みたいな写真があると思うけど、ここに作ったものの簡易的な説明を書くよ"
+    tags: ['Python','AI'],
+    role:"モンテカルロ木探索アルゴリズム部分の実装、パラメータの調整、レポートの考察記入",
+    descriptionEasy:"交換留学先の授業課題（グループワーク）で強化学習を利用した全自動2048を作成しました。",
+    description:"交換留学先の授業課題で作成した全自動2048。モンテカルロ木探索アルゴリズムを用いたシミュレーションから次の最適手を計算する。モンテカルロ法のコード実装部分と、パラメータの調整を担当した。"
   },
+  
   {
     id: '2',
-    title: 'サンプル2',
+    title: 'Markdown memocho',
+    developmentTime: '2024.06.02〜',
+    projectType: '個人開発',
     imageUrl: [sampleImage2, sampleImage3],
-    tags: ['Design'],
-    description: "一旦幅の調整は置いとこう、これでも十分可読性はあるし",
-    projectType: '',
-    developmentTime: ''
+    tags: ['React', 'Typescript', 'Firebase','Node.js'],
+    descriptionEasy:"ここに何を入力しようか",
+    description: "練習用に作成した、マークダウン記法のメモサイト。",
+    url:'https://memo-582m.vercel.app/',   
   },
 ];
 

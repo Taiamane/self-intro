@@ -3,6 +3,9 @@ import './header.css'
 import './footer.css'
 import React, { useState } from 'react';
 import { Link,BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactMarkdown from "react-markdown"
+import remarkGfm from 'remark-gfm';
+
 import profilePic from'./picture/testicon.jpg'
 import Main_workslist from './portfolio';
 import blogs_list from './blogs';
@@ -61,13 +64,9 @@ function App() {
           className='footer-content profileImage'
             />
           <div className='footer-content description'>
-            <p>自己紹介文だよ</p>
-            <p>自己紹介文二つ目だよ</p>
-            <p>自己紹介文二つ目だよ</p>
-            <p>自己紹介文二つ目だよ</p>
-            <p>自己紹介文二つ目だよ</p>
-            <p>自己紹介文二つ目だよ</p>
-            <p>自己紹介文二つ目だよ</p>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              自己紹介文だよ
+            </ReactMarkdown>
           </div>
         </div>
       <div className="copyright"> 2024 Amane</div>
