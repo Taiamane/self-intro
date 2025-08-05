@@ -2,6 +2,8 @@ import sampleImage1 from '../picture/sample1.jpg';
 import sampleImage2 from '../picture/sample2.jpg';
 import sampleImage3 from '../picture/sample3.jpg';
 import sampleImage4 from '../picture/sample4.jpg';
+import picture2_1 from '../picture/pic2_1.png';
+import picture2_2 from '../picture/pic2_2.png';
 
 
 export interface Work {
@@ -9,13 +11,13 @@ export interface Work {
     title: string;
     projectType: string;
     developmentTime: string; 
+    imageUrl: string[]; // 画像URLが必須でない場合   
     tags: string[];
-    description: string;
-    descriptionEasy?:string;
-    imageUrl: string[]; // 画像URLが必須でない場合
     role?: string; // ここをオプションにする
+    descriptionEasy?:string;
+    description: string;   
     url?: string; // 追加で提案したURLもオプションに
-    technologiesUsed?: string[]; 
+    githuburl?:string;
     challenges?: string; // 課題と解決策もオプションに
     learnings?: string; // 学びもオプションに
     
@@ -36,17 +38,30 @@ const worksData: Work[] = [
     descriptionEasy:"交換留学先の授業課題（グループワーク）で強化学習を利用した全自動2048を作成しました。",
     description:"交換留学先の授業課題で作成した全自動2048。モンテカルロ木探索アルゴリズムを用いたシミュレーションから次の最適手を計算する。モンテカルロ法のコード実装部分と、パラメータの調整を担当した。"
   },
-  
+
   {
     id: '2',
     title: 'Markdown memocho',
     developmentTime: '2024.06.02〜',
     projectType: '個人開発',
-    imageUrl: [sampleImage2, sampleImage3],
+    imageUrl: [picture2_1, picture2_2],
     tags: ['React', 'Typescript', 'Firebase','Node.js'],
-    descriptionEasy:"ここに何を入力しようか",
-    description: "練習用に作成した、マークダウン記法のメモサイト。",
-    url:'https://memo-582m.vercel.app/',   
+    descriptionEasy:"練習用に作成した、マークダウン記法のメモサイト。",
+    description: "数年ぶりにweb開発を再開した際に練習用に作成した、マークダウン記法で記入するメモ帳webサイト。ReactMarkdownを適用している。また、firebaseを初めて利用した。",
+    url:'https://memo-582m.vercel.app/',
+    githuburl:"https://github.com/Taiamane/memo",
+  },
+
+  {
+    id: '3',
+    title: 'Amane-portal',
+    developmentTime: '2024.07.07〜',
+    projectType: '個人開発',
+    imageUrl: [],
+    tags: ['React', 'Typescript','Node.js'],
+    descriptionEasy:"自己紹介用のサイト。",
+    description: "",
+    githuburl:"https://github.com/Taiamane/self-intro"      
   },
 ];
 

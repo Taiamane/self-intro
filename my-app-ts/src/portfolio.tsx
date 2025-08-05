@@ -7,7 +7,7 @@ import worksData from './data/works';
 
 function Main_workslist(){
 
-    const allTags =  ['React', 'Python','C++', 'R'] //調整箇所
+    const allTags =  ['React', 'Python','Typescript', 'Node.js'] //調整箇所
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
     const filteredWorks = selectedTags.length > 0
